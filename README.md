@@ -30,7 +30,7 @@ import asyncio
 # Not in async function
 result = asyncio.run(urban_dictionary().search("goy slop"))
 title = result.get("title")
-description = result.get("description")
+description = result.get("definition")
 
 # In async function
 async def main():
@@ -42,7 +42,7 @@ async def main():
 
         results = await urban.search("goy slop")
         title = result.get("title")
-        description = result.get("description")
+        description = result.get("definition")
         
     # Not using your own session
     results = await urban.autocomplete("huak tuah")
